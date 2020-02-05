@@ -1,0 +1,18 @@
+$blue: #68b0c9;
+
+@mixin Museo300 {
+  font-family: "MuseoSansCyrl-300";
+  font-weight: 300;
+}
+@mixin Museo500 {
+  font-family: "MuseoSansCyrl-500";
+  font-weight: 500;
+}
+@mixin Museo700 {
+  font-family: "MuseoSansCyrl-700";
+  font-weight: 700;
+}
+@mixin Museo900 {
+  font-family: "MuseoSansCyrl-900";
+  font-weight: 900;
+}

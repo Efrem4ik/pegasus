@@ -1,0 +1,965 @@
+@import "vars";
+@import "global";
+@import "fonts";
+
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             HEADER START                                                   *
+// *                                                                                                            *
+// **************************************************************************************************************
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 14px;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  li {
+    font-size: 14px;
+    max-width: 130px;
+    text-align: center;
+    & + li {
+      margin-left: 15px;
+    }
+    a {
+      transition: all 0.3s linear;
+      color: $blue;
+      &:hover {
+        color: #00bfff;
+      }
+    }
+  }
+}
+.menu__btn {
+  width: 30px;
+  display: none;
+  cursor: pointer;
+  .row {
+    height: 3px;
+    background-color: $blue;
+    & + .row {
+      margin-top: 4px;
+    }
+  }
+}
+.header__info {
+  padding-top: 20px;
+  text-align: right;
+  &-phone {
+    display: block;
+    color: #5e5e5e;
+    font-size: 24px;
+    padding-bottom: 5px;
+  }
+  &-callback {
+    @include Museo500;
+    color: $blue;
+    font-size: 14px;
+    text-align: right;
+    text-decoration: underline;
+  }
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             MAIN START                                                     *
+// *                                                                                                            *
+// **************************************************************************************************************
+.main {
+  background-image: url(../images/main-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin-bottom: 80px;
+}
+.main__inner {
+  text-align: right;
+  padding-top: 80px;
+  padding-bottom: 61px;
+}
+.main__title {
+  font-size: 41px;
+  line-height: 50px;
+  padding-bottom: 19px;
+  max-width: 605px;
+  margin-left: auto;
+}
+.main__subtitle {
+  @include Museo500;
+  font-size: 27px;
+  color: #5892a6;
+  padding-bottom: 66px;
+}
+.main__form {
+  text-align: center;
+  padding: 38px;
+  background-color: #fff;
+  box-shadow: 0 0 38px rgba(104, 176, 201, 0.34);
+  border-radius: 20px;
+  display: inline-block;
+  &-title {
+    font-size: 20px;
+    color: #5892a6;
+    padding-bottom: 14px;
+  }
+  &-subtitle {
+    @include Museo300;
+    color: #000;
+    font-size: 12px;
+    padding-bottom: 19px;
+  }
+  &-form {
+    input {
+      @include Museo500;
+      font-size: 13px;
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid #e8e8e8;
+      border-radius: 20px;
+      padding: 11px 40px;
+      margin-bottom: 15px;
+    }
+  }
+  &-callback {
+    background-color: $blue;
+    box-shadow: 0 5px 5px rgba(1, 1, 1, 0.1);
+    border: none;
+    border-radius: 23px;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 11px 38px;
+    cursor: pointer;
+  }
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             ABOUT START                                                    *
+// *                                                                                                            *
+// **************************************************************************************************************
+.about {
+  padding-bottom: 99px;
+}
+.about__title {
+  font-size: 36px;
+  text-align: center;
+  padding-bottom: 131px;
+}
+.about__inner-item {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 110px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.inner__item {
+  &-title {
+    font-size: 30px;
+    color: $blue;
+    padding-top: 36px;
+    padding-bottom: 33px;
+    max-width: 315px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/arrow-right.png);
+      width: 199px;
+      height: 53px;
+      right: -58%;
+      top: -35px;
+    }
+  }
+  &-text {
+    @include Museo300;
+    max-width: 387px;
+  }
+}
+.about__item-right {
+  text-align: right;
+  .inner__item-title {
+    margin-left: auto;
+    max-width: 390px;
+    &::before {
+      background-image: url(../images/arrow-left.png);
+      height: 52px;
+      left: -36%;
+      top: -37px;
+    }
+  }
+  .inner__item-text {
+    max-width: 374px;
+    margin-left: auto;
+  }
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             SALE START                                                     *
+// *                                                                                                            *
+// **************************************************************************************************************
+.sale {
+  background-image: url(../images/sale-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 79px;
+  padding-bottom: 49px;
+  margin-bottom: 99px;
+}
+.sale__inner {
+  display: flex;
+  justify-content: flex-end;
+}
+.sale__price {
+  align-self: flex-start;
+  background-color: #fff;
+  padding: 35px 17px;
+  font-size: 30px;
+  color: #d04545;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 120px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/arrow-down.png);
+    width: 155px;
+    height: 64px;
+    bottom: -90px;
+    right: -105px;
+  }
+  span {
+    @include Museo300;
+    font-size: 18px;
+    text-align: center;
+    color: #1e1e1e;
+    text-decoration: line-through;
+    display: block;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+}
+.mobile__price {
+  display: none;
+  font-size: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #d04545;
+  span {
+    text-decoration: line-through;
+    display: block;
+    color: #1e1e1e;
+    padding-bottom: 5px;
+  }
+}
+.sale__box {
+  padding-left: 98px;
+}
+.sale__title {
+  span {
+    display: block;
+    text-align: center;
+  }
+  &-sale {
+    font-size: 55px;
+    text-transform: uppercase;
+  }
+  &-free {
+    text-transform: uppercase;
+    font-size: 26px;
+    @include Museo900;
+  }
+  &-gift {
+    width: 100%;
+    display: inline-block;
+    font-size: 25px;
+    color: $blue;
+    position: relative;
+    padding-bottom: 47px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/gift.svg);
+      width: 22px;
+      height: 20px;
+      top: 4px;
+      left: 75px;
+    }
+  }
+}
+.sale__stock {
+  border: 5px solid #ffffff;
+  border-radius: 23px;
+  padding: 33px 10px;
+  font-size: 14px;
+  color: #d35656;
+  max-width: 275px;
+  margin: 0 auto;
+}
+.sale__date-one {
+  max-width: 72px;
+}
+.sale__stock-image {
+  padding: 0 14px;
+}
+.sale__stock-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.sale__order {
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  padding: 16px 61px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  background-color: $blue;
+  border: none;
+  border-radius: 23px;
+  box-shadow: 0 5px 5px rgba(1, 1, 1, 0.1);
+  cursor: pointer;
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             STATS START                                                    *
+// *                                                                                                            *
+// **************************************************************************************************************
+.stats {
+  margin-bottom: 30px;
+}
+.stats__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.stats__item {
+  @include Museo500;
+  font-size: 18px;
+  span {
+    display: block;
+    font-size: 48px;
+    color: $blue;
+    position: relative;
+    margin-bottom: 49px;
+    text-align: center;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/chair.svg);
+      width: 80px;
+      height: 94px;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             STATS END                                                      *
+// *                                                                                                            *
+// **************************************************************************************************************
+.sliders {
+  padding: 30px 0 70px;
+  background-image: linear-gradient(to bottom, #f9fbfd 0%, #ecf3f8 100%);
+}
+.sliders__title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.slick-slide {
+  width: 315px;
+}
+.slider {
+  img {
+    display: block;
+    width: 315px;
+    height: 220px;
+    padding-right: 10px;
+  }
+}
+.slick-next,
+.slick-prev {
+  background-image: url(../images/Slider-images/arrow-right.svg);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  bottom: -40px;
+  right: 52%;
+  z-index: 2;
+}
+.slick-prev {
+  background-image: url(../images/Slider-images/arrow-left.svg);
+}
+.slick-next {
+  right: 47%;
+}
+.slick-arrow {
+  background-color: transparent;
+  border: none;
+  font-size: 0;
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             CERTIFICATE START                                              *
+// *                                                                                                            *
+// **************************************************************************************************************
+.certificate {
+  padding-top: 80px;
+  padding-bottom: 92px;
+  margin-bottom: 132px;
+  background-image: linear-gradient(to bottom, #f9fbfd 0%, #ecf3f8 100%);
+}
+.certificate__title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 88px;
+}
+.certificate__inner {
+  display: flex;
+  justify-content: space-around;
+}
+.certificate__images {
+  box-shadow: 0 4px 8px rgba(1, 1, 1, 0.15), inset 0 5px 18px rgba(1, 1, 1, 0.1);
+  border: 5px solid #484848;
+  background-color: #ffffff;
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+.certificate__info {
+  max-width: 390px;
+  &-title {
+    padding-left: 65px;
+    color: $blue;
+    font-size: 22px;
+    position: relative;
+    margin-bottom: 49px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/warrning.svg);
+      width: 46px;
+      height: 41px;
+      left: 0;
+      top: 5px;
+    }
+  }
+  &-text {
+    @include Museo500;
+    color: #323232;
+    p {
+      margin: 0;
+      margin-bottom: 29px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             CERTIFICATE END                                                *
+// *                                                                                                            *
+// **************************************************************************************************************
+
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             DESCRIPTION START                                              *
+// *                                                                                                            *
+// **************************************************************************************************************
+.description {
+  margin-bottom: 72px;
+}
+.description__inner {
+  display: flex;
+  justify-content: space-around;
+}
+.description__box {
+  max-width: 235px;
+  &-title {
+    font-size: 20px;
+    color: $blue;
+    padding-bottom: 19px;
+  }
+  &-text {
+    font-size: 14px;
+    @include Museo300;
+    color: #606060;
+  }
+  &.one {
+    text-align: right;
+  }
+  &.three {
+    max-width: 240px;
+    .description__info.one {
+      margin-bottom: 88px;
+    }
+  }
+}
+.description__info.one {
+  margin-bottom: 118px;
+}
+.description__info.one {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/description-arrow/left-up.png);
+    width: 122px;
+    height: 109px;
+    bottom: -35px;
+    right: -150px;
+  }
+}
+.description__info.two {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/description-arrow/left-down.png);
+    width: 144px;
+    height: 54px;
+    right: -145px;
+    top: -30px;
+  }
+}
+.description__info.three {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/description-arrow/right-up.png);
+    width: 148px;
+    height: 78px;
+    left: -160px;
+    top: -30px;
+  }
+}
+.description__info.four {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/description-arrow/right-down.png);
+    width: 143px;
+    height: 53px;
+    left: -160px;
+    top: 3px;
+  }
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             DESCRIPTION END                                                *
+// *                                                                                                            *
+// **************************************************************************************************************
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             ORDER START                                                    *
+// *                                                                                                            *
+// **************************************************************************************************************
+.order {
+  background-image: url(../images/order-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 63px;
+}
+.order__inner {
+  display: flex;
+  justify-content: space-around;
+}
+.order__price {
+  margin-left: 100px;
+  padding: 30px 35px;
+  &.sale__price {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 80px;
+    &::before {
+      width: 0;
+      height: 0;
+    }
+    span {
+      font-size: 14px;
+    }
+    .order__sale {
+      @include Museo700;
+      font-size: 17px;
+      text-align: center;
+      color: $blue;
+      text-decoration: none;
+      padding-bottom: 19px;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
+.order__price.sale__price.order__mobile-price {
+  margin-top: 0;
+  margin-left: 0;
+  display: none;
+}
+.order__application {
+  margin-top: 40px;
+}
+.application__title {
+  font-size: 20px;
+  max-width: 230px;
+  margin: 0 auto;
+  text-align: center;
+  span {
+    color: $blue;
+    display: inline-block;
+    background-color: #fff;
+    padding: 2px 4px;
+    margin-top: 5px;
+    margin-bottom: 27px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/order-arrow.png);
+      width: 65px;
+      height: 105px;
+      right: -120px;
+      top: 10px;
+    }
+  }
+}
+.order__form {
+  text-align: center;
+  input {
+    @include Museo500;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #d5e4ef;
+    padding: 17px 64px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  button {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 17px 63px;
+    background-color: $blue;
+    color: #fff;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(1, 1, 1, 0.1);
+    margin-bottom: 79px;
+  }
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             ORDER END                                                      *
+// *                                                                                                            *
+// **************************************************************************************************************
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             COMPARING START                                                *
+// *                                                                                                            *
+// **************************************************************************************************************
+.comparing {
+  margin-bottom: 78px;
+}
+.comparing__box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+.comparing__title {
+  font-size: 22px;
+  max-width: 98px;
+  text-align: right;
+}
+.comparing__title.mod {
+  color: $blue;
+  max-width: 149px;
+  text-align: left;
+  margin-left: 51px;
+  padding-left: 20px;
+}
+.comparing__mobile-image {
+  display: none;
+}
+.comparing__items {
+  display: flex;
+  justify-content: space-between;
+}
+.comparing__item {
+  max-width: 210px;
+  text-align: right;
+  color: #939393;
+  font-size: 15px;
+}
+.comparing__item.mod {
+  text-align: left;
+  color: $blue;
+}
+.comparing__info-list {
+  margin-bottom: 32px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/comparing-arrow/arrow-left4.png);
+    width: 81px;
+    height: 41px;
+    top: 10px;
+    right: -110px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:nth-child(2) {
+    &::after {
+      background-image: url(../images/comparing-arrow/arrow-left3.png);
+      width: 87px;
+      height: 29px;
+      top: 5px;
+    }
+  }
+  &:nth-child(3) {
+    &::after {
+      background-image: url(../images/comparing-arrow/arrow-left2.png);
+      width: 87px;
+      height: 23px;
+      top: -12px;
+    }
+  }
+  &:nth-child(4) {
+    &::after {
+      background-image: url(../images/comparing-arrow/arrow-left1.png);
+      width: 85px;
+      height: 34px;
+      top: -25px;
+    }
+  }
+}
+.comparing__info-list.mod {
+  &::after {
+    content: none;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/comparing-arrow/arrow-right4.png);
+    width: 81px;
+    height: 41px;
+    left: -120px;
+    bottom: 20px;
+  }
+  &:nth-child(2) {
+    &::before {
+      background-image: url(../images/comparing-arrow/arrow-right3.png);
+      width: 85px;
+      height: 28px;
+    }
+  }
+  &:nth-child(3) {
+    &::before {
+      background-image: url(../images/comparing-arrow/arrow-right2.png);
+      width: 87px;
+      height: 22px;
+      bottom: 25px;
+    }
+  }
+  &:nth-child(4) {
+    &::before {
+      background-image: url(../images/comparing-arrow/arrow-right1.png);
+      width: 84px;
+      height: 34px;
+      bottom: 45px;
+    }
+  }
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             COMPARING END                                                  *
+// *                                                                                                            *
+// **************************************************************************************************************
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             NAVIGATION START                                               *
+// *                                                                                                            *
+// **************************************************************************************************************
+.navigation {
+  background-color: #ecf3f8;
+  padding: 50px 0;
+}
+.navigation__box {
+  display: flex;
+  justify-content: space-between;
+}
+.map {
+  iframe {
+    border-radius: 20px;
+    max-width: 100%;
+  }
+}
+.navigation__info {
+  margin-top: 81px;
+  text-align: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/icons/map.svg);
+    width: 24px;
+    height: 32px;
+    top: -50px;
+    left: 45%;
+  }
+  span {
+    display: block;
+    font-size: 16px;
+    @include Museo300;
+    margin-bottom: 19px;
+  }
+  .navigation__info-address {
+    font-size: 20px;
+    color: $blue;
+    max-width: 271px;
+    margin-bottom: 50px;
+  }
+  button {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 13px 50px;
+    background-color: $blue;
+    color: #fff;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(1, 1, 1, 0.1);
+  }
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             NAVIGATION END                                                 *
+// *                                                                                                            *
+// **************************************************************************************************************
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             FOOTER START                                                   *
+// *                                                                                                            *
+// **************************************************************************************************************
+footer {
+  padding-top: 20px;
+  padding-bottom: 23px;
+}
+.footer__box {
+  display: flex;
+  justify-content: space-between;
+  @include Museo300;
+  font-size: 14px;
+  align-items: center;
+}
+.footer__polit {
+  color: $blue;
+  text-decoration: underline;
+}
+.footer__info {
+  max-width: 136px;
+}
+// **************************************************************************************************************
+// *                                                                                                            *
+// *                                             FOOTER END                                                     *
+// *                                                                                                            *
+// **************************************************************************************************************
+.modal {
+  display: none;
+  max-width: 365px;
+  box-shadow: 0 0 38px rgba(104, 176, 201, 0.34);
+  border-radius: 20px;
+  text-align: center;
+  &__title {
+    font-size: 20px;
+    color: #5892a6;
+    margin: 0;
+    margin-bottom: 7px;
+  }
+  &__subtitle {
+    color: #000000;
+    font-size: 12px;
+    @include Museo300;
+  }
+  &__btn {
+    font-size: 14px;
+    background-color: $blue;
+    border: none;
+    text-transform: uppercase;
+    padding: 17px 0;
+    max-width: 220px;
+    width: 100%;
+    box-shadow: 0 5px 5px rgba(1, 1, 1, 0.1);
+    border-radius: 23px;
+    color: #fff;
+    cursor: pointer;
+  }
+  form {
+    input {
+      font-size: 13px;
+      @include Museo500;
+      color: #9c9c9c;
+      padding: 15px 0;
+      max-width: 220px;
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid #e8e8e8;
+      text-align: center;
+      margin-top: 19px;
+      margin-bottom: 28px;
+    }
+  }
+}
+.fancybox-can-pan .fancybox-content,
+.fancybox-can-swipe .fancybox-content {
+  cursor: auto;
+}
+.fancybox-content {
+  overflow: visible;
+}
+.fancybox-button.fancybox-close-small {
+  // position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/icons/close.svg);
+    width: 24px;
+    height: 24px;
+    top: 0px;
+    right: 0;
+    z-index: 10;
+  }
+  svg {
+    display: none;
+  }
+}
+.fancybox-slide--html .fancybox-close-small {
+  top: -40px;
+}
+.modalone{
+  display: none;
+  &__subtitle{
+    max-width: 185px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@import "media";
