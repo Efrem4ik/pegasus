@@ -1,31 +1,32 @@
-$(function(){
+$(function () {
 
-  $('.menu__btn').on('click', function(){
+  $('.menu__btn').on('click', function () {
     $('.header__list').slideToggle();
   });
 
-  //   $('.class').slick({
-  //   dots: true,
+  $('.slider').slick({
+    dots: false,
+    infinite: false,
+    arrows: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: true
+  });
+  //  $('.slider-for').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
   //   arrows: false,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 4,
-  // }); Обычный одиночный слайдер!
-
-	//  $('.slider-for').slick({
-	//   slidesToShow: 1,
-	//   slidesToScroll: 1,
-	//   arrows: false,
-	//   fade: true,
-	//   asNavFor: '.slider-nav'
-	// });
-	// $('.slider-nav').slick({
-	//   slidesToShow: 3,
-	//   slidesToScroll: 1,
-	//   asNavFor: '.slider-for',
-	//   dots: true,
-	//   centerMode: true,
-	//   focusOnSelect: true
-	// }); Двойной слайдер!
+  //   fade: true,
+  //   asNavFor: '.slider-nav'
+  // });
+  // $('.slider-nav').slick({
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   asNavFor: '.slider-for',
+  //   dots: true,
+  //   centerMode: true,
+  //   focusOnSelect: true
+  // }); Двойной слайдер!
 
 
   // $('.wrapper .tab').on('click', function(event) {

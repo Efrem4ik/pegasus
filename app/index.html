@@ -40,7 +40,8 @@
               <a href="tel:+79507333170" class="header__info-phone">
                 +7 (950) 733-31-70
               </a>
-              <a href="#" class="header__info-callback">Заказать обратный звонок</a>
+              <a data-fancybox data-src="#modal" href="javascript:;" class="header__info-callback">Заказать
+                обратный звонок</a>
             </div>
           </div>
         </div>
@@ -68,7 +69,7 @@
               <form class="main__form-form">
                 <input type="tel" placeholder="Ваш телефон">
               </form>
-              <button class="main__form-callback">
+              <button class="main__form-callback" data-fancybox data-src="#modalone" href="javascript:;">
                 Перезвоните мне
               </button>
             </div>
@@ -152,7 +153,7 @@
                   <span>2 542 р.</span>
                   1 850 р.
                 </div>
-                <button class="sale__order">
+                <button class="sale__order" data-src="#modal" data-fancybox href="javascript:;">
                   Заказать
                 </button>
               </div>
@@ -179,6 +180,20 @@
               <span>45</span>
               заказов в день
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="sliders">
+        <div class="container">
+          <div class="sliders__title">
+            Примеры
+          </div>
+          <div class="slider">
+            <img src="images/Slider-images/1.jpg" alt="">
+            <img src="images/Slider-images/2.jpg" alt="">
+            <img src="images/Slider-images/3.jpg" alt="">
+            <img src="images/Slider-images/4.jpg" alt="">
+            <img src="images/Slider-images/5.jpg" alt="">
           </div>
         </div>
       </section>
@@ -278,7 +293,7 @@
               </div>
               <form class="order__form">
                 <input type="tel" placeholder="Ваш телефон">
-                <button class="order__form-callback">
+                <button class="order__form-callback" data-fancybox data-src="#modalone" href="javascript:;">
                   Перезвоните мне
                 </button>
               </form>
@@ -373,7 +388,7 @@
                 ул. Академика Королева, 38
               </div>
               <span>или используйте</span>
-              <button>Бесплатная доставка</button>
+              <button data-fancybox data-src="#modal" href="javascript:;">Бесплатная доставка</button>
             </div>
           </div>
         </div>
@@ -399,7 +414,25 @@
     </footer>
   </div>
 
+  </div>
+  <div class="modal" id="modal">
+    <h3 class="modal__title">Обратный звонок</h3>
+    <span class="modal__subtitle">Оставляйте номер, мы вам перезвоним!</span>
+    <form>
+      <input type="tel" placeholder="Ваш телефон">
+    </form>
+    <button type="submit" class="modal__btn">Перезвоните мне</button>
+  </div>
 
+  <div id="modalone" class="modalone modal">
+    <div class="modalone__title modal__title">
+      Спасибо за вашу заявку!
+    </div>
+    <div class="modalone__subtitle modal__subtitle">
+      Наш менеджер свяжется с вами
+      в ближайшее время!
+    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
